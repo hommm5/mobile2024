@@ -1,0 +1,40 @@
+info:
+    app:
+        description: This sample application allows database management of car shop
+        name: CarShop
+        version: 1.0.1
+logging:
+    level:
+        blog: WARN
+        org: WARN
+        org.hibernate.SQL: DEBUG
+management:
+    endpoint:
+        health:
+            show-details: always
+    endpoints:
+        web:
+            exposure:
+                include: info, health, httptrace, metrics, threaddump, heapdump, shutdown, beans
+    trace:
+        http:
+            enabled: true
+server:
+    port: 8080
+spring:
+    datasource:
+        driverClassName: com.mysql.cj.jdbc.Driver
+        password: ${MYSQL_PASS:1234}
+        url: jdbc:mysql://localhost:3306/mobile_4?allowPublicKeyRetrieval=true&useSSL=false&createDatabaseIfNotExist=true&amp
+        username: ${MYSQL_USER:root}
+    jpa:
+        hibernate:
+            ddl-auto: update
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.MySQL8Dialect
+                format_sql: true
+                show_sql: true
+                use_sql_comments: true
+
+default.admin.pass: ${DEFAULT_ADMIN_PASS:dido}
