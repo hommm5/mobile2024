@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0ff0047-cc2d-4336-a29e-2f0bffffc196" name="Changes" comment="offer">
+    <list default="true" id="c0ff0047-cc2d-4336-a29e-2f0bffffc196" name="Changes" comment=" model, brand">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/entity/OfferEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/entity/OfferEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/OfferController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/web/OfferController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +187,8 @@
       <workItem from="1705335116366" duration="1832000" />
       <workItem from="1705393306082" duration="1257000" />
       <workItem from="1705394764791" duration="3122000" />
-      <workItem from="1705464222655" duration="3976000" />
+      <workItem from="1705464222655" duration="4938000" />
+      <workItem from="1705477487098" duration="601000" />
     </task>
     <task id="LOCAL-00001" summary="model">
       <option name="closed" value="true" />
@@ -215,7 +214,23 @@
       <option name="project" value="LOCAL" />
       <updated>1705397877961</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary=" model, brand">
+      <option name="closed" value="true" />
+      <created>1705468712601</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1705468712601</updated>
+    </task>
+    <task id="LOCAL-00005" summary=" model, brand">
+      <option name="closed" value="true" />
+      <created>1705468755897</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1705468755897</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,7 +251,8 @@
     <MESSAGE value="login and register" />
     <MESSAGE value="model" />
     <MESSAGE value="offer" />
-    <option name="LAST_COMMIT_MESSAGE" value="offer" />
+    <MESSAGE value=" model, brand" />
+    <option name="LAST_COMMIT_MESSAGE" value=" model, brand" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
