@@ -25,7 +25,7 @@
                     </optgroup>
                 </select>
                 <p class="errors alert alert-danger">
-                    Vechicle model is required.
+                    Vehicle model is required.
                 </p>
             </div>
             <div class="form-group col-md-6 mb-3">
@@ -38,11 +38,14 @@
             </div>
         </div>
         <div class="row">
+            <!--Engine-->
             <div class="form-group col-md-6 mb-3">
                 <label class="text-center text-white font-weight-bold" for="engine">Engine</label>
-                <select id="engine" class="form-control">
+                <select id="engine"
+                        th:name="engine"
+                        class="form-control">
                     <option value="">- Select engine type -</option>
-                    <option>
+                    <option th:each="e : ${T(org.example.model.entity.enums.EngineEnum).values()}">
                         Engine type
                     </option>
                 </select>
@@ -50,17 +53,24 @@
                     Engine type is required.
                 </p>
             </div>
+            <!--EO: Engine-->
+            <!--Transmission-->
             <div class="form-group col-md-6 mb-3">
-                <label class="text-center text-white font-weight-bold" for="transmission">Transmission</label>
-                <select id="transmission" class="form-control">
-                    <option value="">- Select transmission type -</option>
-                    <option> Transmission type
+                <label class="text-center text-white font-weight-bold" for="transmissionEnum">Transmission</label>
+                <select id="transmissionEnum"
+                        th:name="transmission"
+                        class="form-control">
+                    <option value="">- Select transmissionEnum type -</option>
+                    <option th:each="t: ${transmissions}"
+                    th:text="${t.toString().toLowerCase()}"
+                    th:value="${t}">
                     </option>
                 </select>
                 <p class="errors alert alert-danger">
                     Transmission type is required.
                 </p>
             </div>
+            <!--EO: Transmission-->
         </div>
         <div class="row">
             <div class="form-group col-md-6 mb-3">

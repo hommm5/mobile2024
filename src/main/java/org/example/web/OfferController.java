@@ -1,12 +1,10 @@
 package org.example.web;
 
 import org.example.model.dto.CreateOfferDto;
+import org.example.model.entity.enums.TransmissionEnum;
 import org.example.service.OfferService;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;
 
@@ -21,23 +19,28 @@ public class OfferController {
     }
 
     @GetMapping("/all")
-    public String getAllOffers (){
+    public String getAllOffers() {
         return "offers";
     }
 
+    @ModelAttribute("transmissions")
+    public TransmissionEnum[] transmissions(){
+        return TransmissionEnum.values();
+    }
     @GetMapping("/add")
-    public String addAllOffers (){
+    public String addAllOffers() {
         return "offer-add";
     }
 
     @PostMapping("add")
-    public String addOffer(CreateOfferDto createOfferDto){
+    public String addOffer(CreateOfferDto createOfferDto) {
         offerService.createOffer(createOfferDto);
 
         return "/";
     }
+
     @GetMapping("/{uuid}/details")
-    public String getDetails(@PathVariable("uuid") UUID uuid){
+    public String getDetails(@PathVariable("uuid") UUID uuid) {
         return "details";
     }
 }

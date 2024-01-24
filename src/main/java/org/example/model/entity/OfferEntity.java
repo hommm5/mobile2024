@@ -2,7 +2,7 @@ package org.example.model.entity;
 
 import jakarta.persistence.*;
 import org.example.model.entity.enums.EngineEnum;
-import org.example.model.entity.enums.Transmission;
+import org.example.model.entity.enums.TransmissionEnum;
 import org.hibernate.annotations.JdbcTypeCode;
 
 import java.math.BigDecimal;
@@ -25,7 +25,7 @@ public class OfferEntity extends  BaseEntity{
     @Enumerated(EnumType.STRING)
     private EngineEnum engine;
     @Enumerated(EnumType.STRING)
-    private Transmission transmission;
+    private TransmissionEnum transmissionEnum;
     private String description;
     @ManyToOne
     private ModelEntity model;
@@ -70,12 +70,12 @@ public class OfferEntity extends  BaseEntity{
         this.engine = engine;
     }
 
-    public Transmission getTransmission() {
-        return transmission;
+    public TransmissionEnum getTransmission() {
+        return transmissionEnum;
     }
 
-    public void setTransmission(Transmission transmission) {
-        this.transmission = transmission;
+    public void setTransmission(TransmissionEnum transmissionEnum) {
+        this.transmissionEnum = transmissionEnum;
     }
 
     public String getDescription() {
