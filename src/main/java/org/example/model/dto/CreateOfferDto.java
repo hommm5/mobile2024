@@ -9,7 +9,7 @@ public record CreateOfferDto(String description,
                              Long modelId,
                              EngineEnum engine,
                              TransmissionEnum transmission,
-                             String ImgUrl,
+                             String imageUrl,
                              Long mileage,
                              BigDecimal price,
                              Integer year) {

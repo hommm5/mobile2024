@@ -1,9 +1,11 @@
 package org.example.web;
 
 import org.example.model.dto.CreateOfferDto;
+import org.example.model.entity.enums.EngineEnum;
 import org.example.model.entity.enums.TransmissionEnum;
 import org.example.service.OfferService;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;
@@ -27,13 +29,15 @@ public class OfferController {
     public TransmissionEnum[] transmissions(){
         return TransmissionEnum.values();
     }
+
     @GetMapping("/add")
-    public String addAllOffers() {
+    public String addAllOffers(Model model) {
         return "offer-add";
     }
 
-    @PostMapping("add")
+    @PostMapping("/add")
     public String addOffer(CreateOfferDto createOfferDto) {
+
         offerService.createOffer(createOfferDto);
 
         return "/";
